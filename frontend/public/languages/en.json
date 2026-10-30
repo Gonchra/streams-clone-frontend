@@ -1,5 +1,37 @@
 {
-	"home": {
-		"title": "Home Page"
+	"auth": {
+		"register": {
+			"heading": "Register on Streams",
+			"backButtonLabel": "Already have an account? Sign in",
+			"usernameLabel": "Username",
+			"usernameDescription": "This is the name other users will know you by. You can change it later.",
+			"emailLabel": "Email",
+			"emailDescription": "We may use your email for sending account-related notifications.",
+			"passwordLabel": "Password",
+			"passwordDescription": "The password must contain at least 8 characters.",
+			"submitButton": "Sign up",
+			"successAlertTitle": "Check your email",
+			"successAlertDescription": "A verification email has been sent to your inbox. If you don't see the email, check your spam folder.",
+			"errorMessage": "Error when creating an account"
+		},
+		"verify": {
+			"heading": "Account verification",
+			"successMessage": "Account verified",
+			"errorMessage": "Verification error"
+		},
+		"login": {
+			"heading": "Login to Streams",
+			"backButtonLabel": "Don't have an account? Sign up!",
+			"pinLabel": "6-digit code",
+			"pinDescription": "Enter the code from your authentication app.",
+			"loginLabel": "Login",
+			"loginDescription": "Your username or email you used during registration.",
+			"passwordLabel": "Password",
+			"passwordDescription": "The password you used during registration.",
+			"forgotPassword": "Forgot password?",
+			"submitButton": "Login",
+			"successMessage": "You have successfully logged in",
+			"errorMessage": "Error when logging in"
+		}
 	}
 }

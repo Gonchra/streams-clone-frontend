@@ -5,7 +5,36 @@
  */
 
 import { useQuery, useMutation, useSubscription } from '@apollo/client/react'
-import { FindChannelByUsernameDocument, FindChannelByUsernameQuery, FindChannelByUsernameQueryVariables } from '@/gql/graphql'
+import { CreateUserDocument, CreateUserMutation, CreateUserMutationVariables, FindChannelByUsernameDocument, FindChannelByUsernameQuery, FindChannelByUsernameQueryVariables, LoginUserDocument, LoginUserMutation, LoginUserMutationVariables, VerifyAccountDocument, VerifyAccountMutation, VerifyAccountMutationVariables } from '@/gql/graphql'
+
+// ============ AUTH ============
+
+/**
+ * Hook for `CreateUser` mutation.
+ * @see {@link https://www.apollographql.com/docs/react/data/mutations/}
+ * @param baseOptions - MutationOptions for useMutation.
+ */
+export function useCreateUserMutation(baseOptions?: any) {
+  return useMutation<CreateUserMutation, CreateUserMutationVariables>(CreateUserDocument, baseOptions)
+}
+
+/**
+ * Hook for `LoginUser` mutation.
+ * @see {@link https://www.apollographql.com/docs/react/data/mutations/}
+ * @param baseOptions - MutationOptions for useMutation.
+ */
+export function useLoginUserMutation(baseOptions?: any) {
+  return useMutation<LoginUserMutation, LoginUserMutationVariables>(LoginUserDocument, baseOptions)
+}
+
+/**
+ * Hook for `VerifyAccount` mutation.
+ * @see {@link https://www.apollographql.com/docs/react/data/mutations/}
+ * @param baseOptions - MutationOptions for useMutation.
+ */
+export function useVerifyAccountMutation(baseOptions?: any) {
+  return useMutation<VerifyAccountMutation, VerifyAccountMutationVariables>(VerifyAccountDocument, baseOptions)
+}
 
 // ============ QUERIES ============
 
