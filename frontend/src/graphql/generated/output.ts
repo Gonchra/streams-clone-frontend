@@ -5,7 +5,7 @@
  */
 
 import { useQuery, useMutation, useSubscription } from '@apollo/client/react'
-import { CreateUserDocument, CreateUserMutation, CreateUserMutationVariables, FindChannelByUsernameDocument, FindChannelByUsernameQuery, FindChannelByUsernameQueryVariables, LoginUserDocument, LoginUserMutation, LoginUserMutationVariables, VerifyAccountDocument, VerifyAccountMutation, VerifyAccountMutationVariables } from '@/gql/graphql'
+import { CreateUserDocument, CreateUserMutation, CreateUserMutationVariables, FindChannelByUsernameDocument, FindChannelByUsernameQuery, FindChannelByUsernameQueryVariables, LoginUserDocument, LoginUserMutation, LoginUserMutationVariables, NewPasswordDocument, NewPasswordMutation, NewPasswordMutationVariables, ResetPasswordDocument, ResetPasswordMutation, ResetPasswordMutationVariables, VerifyAccountDocument, VerifyAccountMutation, VerifyAccountMutationVariables } from '@/gql/graphql'
 
 // ============ AUTH ============
 
@@ -25,6 +25,24 @@ export function useCreateUserMutation(baseOptions?: any) {
  */
 export function useLoginUserMutation(baseOptions?: any) {
   return useMutation<LoginUserMutation, LoginUserMutationVariables>(LoginUserDocument, baseOptions)
+}
+
+/**
+ * Hook for `NewPassword` mutation.
+ * @see {@link https://www.apollographql.com/docs/react/data/mutations/}
+ * @param baseOptions - MutationOptions for useMutation.
+ */
+export function useNewPasswordMutation(baseOptions?: any) {
+  return useMutation<NewPasswordMutation, NewPasswordMutationVariables>(NewPasswordDocument, baseOptions)
+}
+
+/**
+ * Hook for `ResetPassword` mutation.
+ * @see {@link https://www.apollographql.com/docs/react/data/mutations/}
+ * @param baseOptions - MutationOptions for useMutation.
+ */
+export function useResetPasswordMutation(baseOptions?: any) {
+  return useMutation<ResetPasswordMutation, ResetPasswordMutationVariables>(ResetPasswordDocument, baseOptions)
 }
 
 /**
