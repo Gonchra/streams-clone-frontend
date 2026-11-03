@@ -14,9 +14,11 @@ import { useRouter } from 'next/navigation'
 import { useState } from 'react'
 import { InputOTP, InputOTPGroup, InputOTPSlot } from '@/components/ui/common/input-otp'
 import Link from 'next/link'
+import { useAuth } from '@/hooks/useAuth'
 
 export function LoginForm() {
 	const t = useTranslations('auth.login')
+	const {auth} = useAuth()
 
 	const router = useRouter()
 
@@ -35,6 +37,7 @@ export function LoginForm() {
 			if (data.loginUser.message) {
 				setIsShowTwoFactor(true)
 			} else {
+				auth()
 				toast.success(t('successMessage'))
 				router.push('/dashboard/settings')
 			}

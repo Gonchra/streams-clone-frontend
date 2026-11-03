@@ -5,7 +5,7 @@
  */
 
 import { useQuery, useMutation, useSubscription } from '@apollo/client/react'
-import { CreateUserDocument, CreateUserMutation, CreateUserMutationVariables, FindChannelByUsernameDocument, FindChannelByUsernameQuery, FindChannelByUsernameQueryVariables, LoginUserDocument, LoginUserMutation, LoginUserMutationVariables, NewPasswordDocument, NewPasswordMutation, NewPasswordMutationVariables, ResetPasswordDocument, ResetPasswordMutation, ResetPasswordMutationVariables, VerifyAccountDocument, VerifyAccountMutation, VerifyAccountMutationVariables } from '@/gql/graphql'
+import { ClearSessionCookieDocument, ClearSessionCookieMutation, ClearSessionCookieMutationVariables, CreateUserDocument, CreateUserMutation, CreateUserMutationVariables, FindNotificationsByUserDocument, FindNotificationsByUserQuery, FindNotificationsByUserQueryVariables, FindNotificationsUnreadCountDocument, FindNotificationsUnreadCountQuery, FindNotificationsUnreadCountQueryVariables, FindProfileDocument, FindProfileQuery, FindProfileQueryVariables, LoginUserDocument, LoginUserMutation, LoginUserMutationVariables, LogoutUserDocument, LogoutUserMutation, LogoutUserMutationVariables, NewPasswordDocument, NewPasswordMutation, NewPasswordMutationVariables, ResetPasswordDocument, ResetPasswordMutation, ResetPasswordMutationVariables, VerifyAccountDocument, VerifyAccountMutation, VerifyAccountMutationVariables } from '@/gql/graphql'
 
 // ============ AUTH ============
 
@@ -25,6 +25,15 @@ export function useCreateUserMutation(baseOptions?: any) {
  */
 export function useLoginUserMutation(baseOptions?: any) {
   return useMutation<LoginUserMutation, LoginUserMutationVariables>(LoginUserDocument, baseOptions)
+}
+
+/**
+ * Hook for `LogoutUser` mutation.
+ * @see {@link https://www.apollographql.com/docs/react/data/mutations/}
+ * @param baseOptions - MutationOptions for useMutation.
+ */
+export function useLogoutUserMutation(baseOptions?: any) {
+  return useMutation<LogoutUserMutation, LogoutUserMutationVariables>(LogoutUserDocument, baseOptions)
 }
 
 /**
@@ -54,14 +63,41 @@ export function useVerifyAccountMutation(baseOptions?: any) {
   return useMutation<VerifyAccountMutation, VerifyAccountMutationVariables>(VerifyAccountDocument, baseOptions)
 }
 
-// ============ QUERIES ============
+// ============ USER ============
 
 /**
- * Hook for `FindChannelByUsername` query.
+ * Hook for `ClearSessionCookie` mutation.
+ * @see {@link https://www.apollographql.com/docs/react/data/mutations/}
+ * @param baseOptions - MutationOptions for useMutation.
+ */
+export function useClearSessionCookieMutation(baseOptions?: any) {
+  return useMutation<ClearSessionCookieMutation, ClearSessionCookieMutationVariables>(ClearSessionCookieDocument, baseOptions)
+}
+
+/**
+ * Hook for `FindNotificationsByUser` query.
  * @see {@link https://www.apollographql.com/docs/react/data/queries/}
  * @param baseOptions - WatchQueryOptions for useQuery.
  */
-export function useFindChannelByUsernameQuery(baseOptions?: any) {
-  return useQuery<FindChannelByUsernameQuery, FindChannelByUsernameQueryVariables>(FindChannelByUsernameDocument, baseOptions)
+export function useFindNotificationsByUserQuery(baseOptions?: any) {
+  return useQuery<FindNotificationsByUserQuery, FindNotificationsByUserQueryVariables>(FindNotificationsByUserDocument, baseOptions)
+}
+
+/**
+ * Hook for `FindNotificationsUnreadCount` query.
+ * @see {@link https://www.apollographql.com/docs/react/data/queries/}
+ * @param baseOptions - WatchQueryOptions for useQuery.
+ */
+export function useFindNotificationsUnreadCountQuery(baseOptions?: any) {
+  return useQuery<FindNotificationsUnreadCountQuery, FindNotificationsUnreadCountQueryVariables>(FindNotificationsUnreadCountDocument, baseOptions)
+}
+
+/**
+ * Hook for `FindProfile` query.
+ * @see {@link https://www.apollographql.com/docs/react/data/queries/}
+ * @param baseOptions - WatchQueryOptions for useQuery.
+ */
+export function useFindProfileQuery(baseOptions?: any) {
+  return useQuery<FindProfileQuery, FindProfileQueryVariables>(FindProfileDocument, baseOptions)
 }
 
