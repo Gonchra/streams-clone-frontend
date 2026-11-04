@@ -5,7 +5,7 @@
  */
 
 import { useQuery, useMutation, useSubscription } from '@apollo/client/react'
-import { ClearSessionCookieDocument, ClearSessionCookieMutation, ClearSessionCookieMutationVariables, CreateUserDocument, CreateUserMutation, CreateUserMutationVariables, FindNotificationsByUserDocument, FindNotificationsByUserQuery, FindNotificationsByUserQueryVariables, FindNotificationsUnreadCountDocument, FindNotificationsUnreadCountQuery, FindNotificationsUnreadCountQueryVariables, FindProfileDocument, FindProfileQuery, FindProfileQueryVariables, LoginUserDocument, LoginUserMutation, LoginUserMutationVariables, LogoutUserDocument, LogoutUserMutation, LogoutUserMutationVariables, NewPasswordDocument, NewPasswordMutation, NewPasswordMutationVariables, ResetPasswordDocument, ResetPasswordMutation, ResetPasswordMutationVariables, VerifyAccountDocument, VerifyAccountMutation, VerifyAccountMutationVariables } from '@/gql/graphql'
+import { ClearSessionCookieDocument, ClearSessionCookieMutation, ClearSessionCookieMutationVariables, CreateUserDocument, CreateUserMutation, CreateUserMutationVariables, FindNotificationsByUserDocument, FindNotificationsByUserQuery, FindNotificationsByUserQueryVariables, FindNotificationsUnreadCountDocument, FindNotificationsUnreadCountQuery, FindNotificationsUnreadCountQueryVariables, FindProfileDocument, FindProfileQuery, FindProfileQueryVariables, FindRecommendedChannelsDocument, FindRecommendedChannelsQuery, FindRecommendedChannelsQueryVariables, LoginUserDocument, LoginUserMutation, LoginUserMutationVariables, LogoutUserDocument, LogoutUserMutation, LogoutUserMutationVariables, NewPasswordDocument, NewPasswordMutation, NewPasswordMutationVariables, ResetPasswordDocument, ResetPasswordMutation, ResetPasswordMutationVariables, VerifyAccountDocument, VerifyAccountMutation, VerifyAccountMutationVariables } from '@/gql/graphql'
 
 // ============ AUTH ============
 
@@ -61,6 +61,17 @@ export function useResetPasswordMutation(baseOptions?: any) {
  */
 export function useVerifyAccountMutation(baseOptions?: any) {
   return useMutation<VerifyAccountMutation, VerifyAccountMutationVariables>(VerifyAccountDocument, baseOptions)
+}
+
+// ============ CHANNEL ============
+
+/**
+ * Hook for `FindRecommendedChannels` query.
+ * @see {@link https://www.apollographql.com/docs/react/data/queries/}
+ * @param baseOptions - WatchQueryOptions for useQuery.
+ */
+export function useFindRecommendedChannelsQuery(baseOptions?: any) {
+  return useQuery<FindRecommendedChannelsQuery, FindRecommendedChannelsQueryVariables>(FindRecommendedChannelsDocument, baseOptions)
 }
 
 // ============ USER ============
