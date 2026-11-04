@@ -18,7 +18,7 @@ import { toast } from 'sonner'
 import { Notifications } from '@/components/layout/header/nofitications/Notifications'
 
 export function ProfileMenu() {
-	const t = useTranslations('layout.headerMenu.profileMenu')
+	const t = useTranslations('layout.header.headerMenu.profileMenu')
 	const router = useRouter()
 
 	const { exit } = useAuth()

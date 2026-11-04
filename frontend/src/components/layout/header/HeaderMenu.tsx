@@ -7,7 +7,7 @@ import { Button } from '@/components/ui/common/button'
 import { ProfileMenu } from '@/components/layout/header/ProfileMenu'
 
 export function HeaderMenu() {
-	const t = useTranslations('layout.headerMenu')
+	const t = useTranslations('layout.header.headerMenu')
 	const { isAuthenticated } = useAuth()
 
 

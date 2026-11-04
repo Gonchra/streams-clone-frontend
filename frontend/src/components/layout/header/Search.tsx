@@ -8,7 +8,7 @@ import { Button } from '@/components/ui/common/button'
 import { SearchIcon } from 'lucide-react'
 
 export function Search() {
-	const t = useTranslations('layout.search')
+	const t = useTranslations('layout.header.search')
 
 	const [searchTerm, setSearchTerm] = useState('')
 	const router = useRouter()

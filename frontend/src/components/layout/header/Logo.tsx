@@ -5,7 +5,7 @@ import Image from 'next/image'
 import { useTranslations } from 'next-intl'
 
 export function Logo() {
-	const t = useTranslations('layout.logo')
+	const t = useTranslations('layout.header.logo')
 
 	return (
 		<Link href="/" className="flex items-center gap-x-4 transition-opacity hover:opacity-75">
