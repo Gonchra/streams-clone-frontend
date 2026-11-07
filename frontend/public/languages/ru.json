@@ -46,10 +46,10 @@
 				"sponsors": "Спонсоры",
 				"premium": "Премиум планы",
 				"transactions": "Транзакции"
+			},
+			"recommended": {
+				"heading": "Рекомендации"
 			}
-		},
-		"recommended": {
-			"heading": "Рекомендации"
 		}
 	},
 	"auth": {

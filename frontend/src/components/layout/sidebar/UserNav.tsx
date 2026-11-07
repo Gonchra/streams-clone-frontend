@@ -4,6 +4,7 @@ import { useTranslations } from 'next-intl'
 import type { Route } from '@/components/layout/sidebar/route.interface'
 import { Folder, Home, Radio } from 'lucide-react'
 import { SidebarItem } from '@/components/layout/sidebar/SidebarItem'
+import { RecommendedChannels } from '@/components/layout/header/RecommendedChannels'
 
 export function UserNav() {
 	const t = useTranslations('layout.sidebar.userNav')
@@ -31,6 +32,7 @@ export function UserNav() {
 			{routes.map((route, index) => (
 				<SidebarItem route={route} key={index}/>
 			))}
+			<RecommendedChannels />
 		</div>
 	)
 }

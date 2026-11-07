@@ -45,10 +45,10 @@
 				"categories": "Categories",
 				"streams": "Streams",
 				"recommended": "Recommended"
+			},
+			"recommended": {
+				"heading": "Recommendations"
 			}
-		},
-		"recommended": {
-			"heading": "Recommendations"
 		}
 	},
 	"auth": {
