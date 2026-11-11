@@ -20,6 +20,7 @@ const buttonVariants = cva(
         default:
           "h-10 px-5 py-2 rounded-full has-data-[icon=inline-end]:pr-2 has-data-[icon=inline-start]:pl-2",
 			icon: "size-8 rounded-full",
+			lgIcon: 'size-10 rounded-full'
       },
     },
     defaultVariants: {

@@ -10,6 +10,7 @@ import Link from 'next/link'
 import { ChannelAvatar } from '@/components/ui/elements/ChannelAvatar'
 import { ChannelVerified } from '@/components/ui/elements/ChannelVerified'
 import { LiveBadge } from '@/components/ui/elements/LiveBadge'
+import { Skeleton } from '@/components/ui/common/skeleton'
 
 interface ChannelItemProps {
 	channel: FindRecommendedChannelsQuery['findRecommendedChannels'][0]
@@ -31,9 +32,9 @@ export function ChannelItem({ channel }: ChannelItemProps) {
 	) : (
 		<Button className={cn('h-11 mt-2 w-full justify-start', isActive && 'bg-accent')} variant="ghost" asChild>
 			<Link href={`/${channel.username}`} className="flex w-full items-center">
-				<ChannelAvatar channel={channel} isLive={channel.stream.isLive} size='sm'/>
+				<ChannelAvatar channel={channel} isLive={channel.stream.isLive} size="sm" />
 				<h2 className="truncate pl-3 pr-1">{channel.username}</h2>
-				{channel.isVerified && <ChannelVerified size='sm' />}
+				{channel.isVerified && <ChannelVerified size="sm" />}
 				{channel.stream.isLive && (
 					<div className="absolute right-5">
 						<LiveBadge />
@@ -41,5 +42,11 @@ export function ChannelItem({ channel }: ChannelItemProps) {
 				)}
 			</Link>
 		</Button>
+	)
+}
+
+export function ChannelItemSkeleton() {
+	return (
+		<Skeleton className="mt-3 h-11 w-full rounded-full" />
 	)
 }

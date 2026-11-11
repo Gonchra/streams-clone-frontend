@@ -1,10 +1,7 @@
 'use client'
 
 import { cva, VariantProps } from 'class-variance-authority'
-import { FindProfileQuery } from '@/gql/graphql'
-import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/common/avatar'
 import { cn } from '@/utils/tw-merge'
-import { getMediaSource } from '@/utils/get-media-source'
 import { Check } from 'lucide-react'
 
 const channelVerifiedSizes = cva('', {

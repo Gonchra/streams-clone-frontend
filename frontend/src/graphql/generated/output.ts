@@ -5,7 +5,7 @@
  */
 
 import { useQuery, useMutation, useSubscription } from '@apollo/client/react'
-import { ClearSessionCookieDocument, ClearSessionCookieMutation, ClearSessionCookieMutationVariables, CreateUserDocument, CreateUserMutation, CreateUserMutationVariables, FindNotificationsByUserDocument, FindNotificationsByUserQuery, FindNotificationsByUserQueryVariables, FindNotificationsUnreadCountDocument, FindNotificationsUnreadCountQuery, FindNotificationsUnreadCountQueryVariables, FindProfileDocument, FindProfileQuery, FindProfileQueryVariables, FindRecommendedChannelsDocument, FindRecommendedChannelsQuery, FindRecommendedChannelsQueryVariables, LoginUserDocument, LoginUserMutation, LoginUserMutationVariables, LogoutUserDocument, LogoutUserMutation, LogoutUserMutationVariables, NewPasswordDocument, NewPasswordMutation, NewPasswordMutationVariables, ResetPasswordDocument, ResetPasswordMutation, ResetPasswordMutationVariables, VerifyAccountDocument, VerifyAccountMutation, VerifyAccountMutationVariables } from '@/gql/graphql'
+import { ChangeProfileAvatarDocument, ChangeProfileAvatarMutation, ChangeProfileAvatarMutationVariables, ClearSessionCookieDocument, ClearSessionCookieMutation, ClearSessionCookieMutationVariables, CreateUserDocument, CreateUserMutation, CreateUserMutationVariables, FindNotificationsByUserDocument, FindNotificationsByUserQuery, FindNotificationsByUserQueryVariables, FindNotificationsUnreadCountDocument, FindNotificationsUnreadCountQuery, FindNotificationsUnreadCountQueryVariables, FindProfileDocument, FindProfileQuery, FindProfileQueryVariables, FindRecommendedChannelsDocument, FindRecommendedChannelsQuery, FindRecommendedChannelsQueryVariables, LoginUserDocument, LoginUserMutation, LoginUserMutationVariables, LogoutUserDocument, LogoutUserMutation, LogoutUserMutationVariables, NewPasswordDocument, NewPasswordMutation, NewPasswordMutationVariables, RemoveProfileAvatarDocument, RemoveProfileAvatarMutation, RemoveProfileAvatarMutationVariables, ResetPasswordDocument, ResetPasswordMutation, ResetPasswordMutationVariables, VerifyAccountDocument, VerifyAccountMutation, VerifyAccountMutationVariables } from '@/gql/graphql'
 
 // ============ AUTH ============
 
@@ -63,18 +63,25 @@ export function useVerifyAccountMutation(baseOptions?: any) {
   return useMutation<VerifyAccountMutation, VerifyAccountMutationVariables>(VerifyAccountDocument, baseOptions)
 }
 
-// ============ CHANNEL ============
+// ============ USER ============
 
 /**
- * Hook for `FindRecommendedChannels` query.
- * @see {@link https://www.apollographql.com/docs/react/data/queries/}
- * @param baseOptions - WatchQueryOptions for useQuery.
+ * Hook for `ChangeProfileAvatar` mutation.
+ * @see {@link https://www.apollographql.com/docs/react/data/mutations/}
+ * @param baseOptions - MutationOptions for useMutation.
  */
-export function useFindRecommendedChannelsQuery(baseOptions?: any) {
-  return useQuery<FindRecommendedChannelsQuery, FindRecommendedChannelsQueryVariables>(FindRecommendedChannelsDocument, baseOptions)
+export function useChangeProfileAvatarMutation(baseOptions?: any) {
+  return useMutation<ChangeProfileAvatarMutation, ChangeProfileAvatarMutationVariables>(ChangeProfileAvatarDocument, baseOptions)
 }
 
-// ============ USER ============
+/**
+ * Hook for `RemoveProfileAvatar` mutation.
+ * @see {@link https://www.apollographql.com/docs/react/data/mutations/}
+ * @param baseOptions - MutationOptions for useMutation.
+ */
+export function useRemoveProfileAvatarMutation(baseOptions?: any) {
+  return useMutation<RemoveProfileAvatarMutation, RemoveProfileAvatarMutationVariables>(RemoveProfileAvatarDocument, baseOptions)
+}
 
 /**
  * Hook for `ClearSessionCookie` mutation.
@@ -110,5 +117,16 @@ export function useFindNotificationsUnreadCountQuery(baseOptions?: any) {
  */
 export function useFindProfileQuery(baseOptions?: any) {
   return useQuery<FindProfileQuery, FindProfileQueryVariables>(FindProfileDocument, baseOptions)
+}
+
+// ============ CHANNEL ============
+
+/**
+ * Hook for `FindRecommendedChannels` query.
+ * @see {@link https://www.apollographql.com/docs/react/data/queries/}
+ * @param baseOptions - WatchQueryOptions for useQuery.
+ */
+export function useFindRecommendedChannelsQuery(baseOptions?: any) {
+  return useQuery<FindRecommendedChannelsQuery, FindRecommendedChannelsQueryVariables>(FindRecommendedChannelsDocument, baseOptions)
 }
 

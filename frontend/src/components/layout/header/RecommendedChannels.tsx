@@ -4,7 +4,7 @@ import { useTranslations } from 'next-intl'
 import { useFindRecommendedChannelsQuery } from '@/graphql/generated/output'
 import { useSidebar } from '@/hooks/useSidebar'
 import { Separator } from '@/components/ui/common/separator'
-import { ChannelItem } from '@/components/layout/sidebar/ChannelItem'
+import { ChannelItem, ChannelItemSkeleton } from '@/components/layout/sidebar/ChannelItem'
 
 export function RecommendedChannels() {
 	const t = useTranslations('layout.sidebar.recommended')
@@ -23,7 +23,9 @@ export function RecommendedChannels() {
 					{t('heading')}
 				</h2>
 			)}
-			{isLoadingRecommended ? <div>Loading...</div> : channels.map((channel, index) => (
+			{isLoadingRecommended ? Array.from({length: 7}).map((_, index) => (
+				<ChannelItemSkeleton key={index} />
+			)) : channels.map((channel, index) => (
 				<ChannelItem channel={channel} key={index} />
 			))}
 		</div>
