@@ -4,6 +4,7 @@ import { useTranslations } from 'next-intl'
 import { Heading } from '@/components/ui/elements/Heading'
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/common/tabs'
 import { ChangeAvatarForm } from '@/components/features/user/profile/ChangeAvatarForm'
+import { ChangeInfoForm } from '@/components/features/user/profile/ChangeInfoForm'
 
 export function UserSettings() {
 	const t = useTranslations('dashboard.settings')
@@ -37,6 +38,7 @@ export function UserSettings() {
 					<div className="mt-5 space-y-6">
 						<Heading title={t('profile.header.heading')} description={t('profile.header.description')} />
 						<ChangeAvatarForm />
+						<ChangeInfoForm />
 					</div>
 				</TabsContent>
 				<TabsContent value="account">2</TabsContent>

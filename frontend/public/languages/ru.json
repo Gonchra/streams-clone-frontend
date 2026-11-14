@@ -135,6 +135,21 @@
 					"errorUpdateMessage": "Ошибка при обновлении изображения профиля",
 					"successRemoveMessage": "Изображение профиля успешно удалено",
 					"errorRemoveMessage": "Ошибка при удалении изображения профиля"
+				},
+				"info": {
+					"heading": "Настройки профиля",
+					"usernameLabel": "Имя пользователя",
+					"usernamePlaceholder": "johndoe",
+					"usernameDescription": "Под этим именем вас будут знать другие пользователи.",
+					"displayNameLabel": "Отображаемое имя",
+					"displayNamePlaceholder": "John Doe",
+					"displayNameDescription": "Проставьте прописные буквы в имени пользователя по своему желанию.",
+					"bioLabel": "О себе",
+					"bioPlaceholder": "Я люблю программировать",
+					"bioDescription": "Информация о себе должна содержать не более 300 символов.",
+					"submitButton": "Сохранить изменения",
+					"successMessage": "Профиль успешно обновлен",
+					"errorMessage": "Ошибка при обновлении профиля"
 				}
 			}
 		}

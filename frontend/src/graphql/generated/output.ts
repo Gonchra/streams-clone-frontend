@@ -5,7 +5,7 @@
  */
 
 import { useQuery, useMutation, useSubscription } from '@apollo/client/react'
-import { ChangeProfileAvatarDocument, ChangeProfileAvatarMutation, ChangeProfileAvatarMutationVariables, ClearSessionCookieDocument, ClearSessionCookieMutation, ClearSessionCookieMutationVariables, CreateUserDocument, CreateUserMutation, CreateUserMutationVariables, FindNotificationsByUserDocument, FindNotificationsByUserQuery, FindNotificationsByUserQueryVariables, FindNotificationsUnreadCountDocument, FindNotificationsUnreadCountQuery, FindNotificationsUnreadCountQueryVariables, FindProfileDocument, FindProfileQuery, FindProfileQueryVariables, FindRecommendedChannelsDocument, FindRecommendedChannelsQuery, FindRecommendedChannelsQueryVariables, LoginUserDocument, LoginUserMutation, LoginUserMutationVariables, LogoutUserDocument, LogoutUserMutation, LogoutUserMutationVariables, NewPasswordDocument, NewPasswordMutation, NewPasswordMutationVariables, RemoveProfileAvatarDocument, RemoveProfileAvatarMutation, RemoveProfileAvatarMutationVariables, ResetPasswordDocument, ResetPasswordMutation, ResetPasswordMutationVariables, VerifyAccountDocument, VerifyAccountMutation, VerifyAccountMutationVariables } from '@/gql/graphql'
+import { ChangeProfileAvatarDocument, ChangeProfileAvatarMutation, ChangeProfileAvatarMutationVariables, ChangeProfileInfoDocument, ChangeProfileInfoMutation, ChangeProfileInfoMutationVariables, ClearSessionCookieDocument, ClearSessionCookieMutation, ClearSessionCookieMutationVariables, CreateUserDocument, CreateUserMutation, CreateUserMutationVariables, FindNotificationsByUserDocument, FindNotificationsByUserQuery, FindNotificationsByUserQueryVariables, FindNotificationsUnreadCountDocument, FindNotificationsUnreadCountQuery, FindNotificationsUnreadCountQueryVariables, FindProfileDocument, FindProfileQuery, FindProfileQueryVariables, FindRecommendedChannelsDocument, FindRecommendedChannelsQuery, FindRecommendedChannelsQueryVariables, LoginUserDocument, LoginUserMutation, LoginUserMutationVariables, LogoutUserDocument, LogoutUserMutation, LogoutUserMutationVariables, NewPasswordDocument, NewPasswordMutation, NewPasswordMutationVariables, RemoveProfileAvatarDocument, RemoveProfileAvatarMutation, RemoveProfileAvatarMutationVariables, ResetPasswordDocument, ResetPasswordMutation, ResetPasswordMutationVariables, VerifyAccountDocument, VerifyAccountMutation, VerifyAccountMutationVariables } from '@/gql/graphql'
 
 // ============ AUTH ============
 
@@ -72,6 +72,15 @@ export function useVerifyAccountMutation(baseOptions?: any) {
  */
 export function useChangeProfileAvatarMutation(baseOptions?: any) {
   return useMutation<ChangeProfileAvatarMutation, ChangeProfileAvatarMutationVariables>(ChangeProfileAvatarDocument, baseOptions)
+}
+
+/**
+ * Hook for `ChangeProfileInfo` mutation.
+ * @see {@link https://www.apollographql.com/docs/react/data/mutations/}
+ * @param baseOptions - MutationOptions for useMutation.
+ */
+export function useChangeProfileInfoMutation(baseOptions?: any) {
+  return useMutation<ChangeProfileInfoMutation, ChangeProfileInfoMutationVariables>(ChangeProfileInfoDocument, baseOptions)
 }
 
 /**
