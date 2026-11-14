@@ -150,6 +150,30 @@
 					"submitButton": "Save Changes",
 					"successMessage": "Profile updated successfully",
 					"errorMessage": "Error updating profile"
+				},
+				"socialLinks": {
+					"createForm": {
+						"heading": "Social Media Links",
+						"titleLabel": "Link Title",
+						"titlePlaceholder": "YouTube",
+						"titleDescription": "Link text",
+						"urlLabel": "Link URL",
+						"urlPlaceholder": "https://github.com/Gonchra",
+						"urlDescription": "Where does this link lead? Enter the full URL, e.g., https://github.com/Gonchra",
+						"submitButton": "Add",
+						"successMessage": "Social media link added successfully",
+						"errorMessage": "Error adding social media link"
+					},
+					"editForm": {
+						"cancelButton": "Cancel",
+						"submitButton": "Save",
+						"successUpdateMessage": "Social media link updated successfully",
+						"errorUpdateMessage": "Error updating social media link",
+						"successRemoveMessage": "Social media link removed successfully",
+						"errorRemoveMessage": "Error removing social media link"
+					},
+					"successReorderMessage": "Social media link order updated",
+					"errorReorderMessage": "Error updating social media link order"
 				}
 			}
 		}

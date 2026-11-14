@@ -5,6 +5,7 @@ import { Heading } from '@/components/ui/elements/Heading'
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/common/tabs'
 import { ChangeAvatarForm } from '@/components/features/user/profile/ChangeAvatarForm'
 import { ChangeInfoForm } from '@/components/features/user/profile/ChangeInfoForm'
+import { SocialLinksForm } from '@/components/features/user/profile/social-links-form/SocialLinksForm'
 
 export function UserSettings() {
 	const t = useTranslations('dashboard.settings')
@@ -39,6 +40,7 @@ export function UserSettings() {
 						<Heading title={t('profile.header.heading')} description={t('profile.header.description')} />
 						<ChangeAvatarForm />
 						<ChangeInfoForm />
+						<SocialLinksForm />
 					</div>
 				</TabsContent>
 				<TabsContent value="account">2</TabsContent>

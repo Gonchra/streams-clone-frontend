@@ -150,6 +150,30 @@
 					"submitButton": "Сохранить изменения",
 					"successMessage": "Профиль успешно обновлен",
 					"errorMessage": "Ошибка при обновлении профиля"
+				},
+				"socialLinks": {
+					"createForm": {
+						"heading": "Ссылки на соцсети",
+						"titleLabel": "Название ссылки",
+						"titlePlaceholder": "Youtube",
+						"titleDescription": "Текст ссылки",
+						"urlLabel": "URL ссылки",
+						"urlPlaceholder": "https://github.com/Gonchra",
+						"urlDescription": "Куда ведет эта ссылка? Введите полный URL-адрес, например https://github.com/Gonchra",
+						"submitButton": "Добавить",
+						"successMessage": "Ссылка на соц. сеть успешно добавлена",
+						"errorMessage": "Ошибка при добавлении ссылки на соц. сеть"
+					},
+					"editForm": {
+						"cancelButton": "Отмена",
+						"submitButton": "Сохранить",
+						"successUpdateMessage": "Ссылка на соц. сеть успешно изменена",
+						"errorUpdateMessage": "Ошибка при обновлении соц.сети",
+						"successRemoveMessage": "Ссылка на соц. сеть успешно удалена",
+						"errorRemoveMessage": "Ошибка при удалении соц. сети"
+					},
+					"successReorderMessage": "Порядок ссылок на соц. сети изменен",
+					"errorReorderMessage": "Ошибка при изменении порядка соц. сетей"
 				}
 			}
 		}

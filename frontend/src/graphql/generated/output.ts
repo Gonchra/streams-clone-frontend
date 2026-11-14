@@ -5,7 +5,7 @@
  */
 
 import { useQuery, useMutation, useSubscription } from '@apollo/client/react'
-import { ChangeProfileAvatarDocument, ChangeProfileAvatarMutation, ChangeProfileAvatarMutationVariables, ChangeProfileInfoDocument, ChangeProfileInfoMutation, ChangeProfileInfoMutationVariables, ClearSessionCookieDocument, ClearSessionCookieMutation, ClearSessionCookieMutationVariables, CreateUserDocument, CreateUserMutation, CreateUserMutationVariables, FindNotificationsByUserDocument, FindNotificationsByUserQuery, FindNotificationsByUserQueryVariables, FindNotificationsUnreadCountDocument, FindNotificationsUnreadCountQuery, FindNotificationsUnreadCountQueryVariables, FindProfileDocument, FindProfileQuery, FindProfileQueryVariables, FindRecommendedChannelsDocument, FindRecommendedChannelsQuery, FindRecommendedChannelsQueryVariables, LoginUserDocument, LoginUserMutation, LoginUserMutationVariables, LogoutUserDocument, LogoutUserMutation, LogoutUserMutationVariables, NewPasswordDocument, NewPasswordMutation, NewPasswordMutationVariables, RemoveProfileAvatarDocument, RemoveProfileAvatarMutation, RemoveProfileAvatarMutationVariables, ResetPasswordDocument, ResetPasswordMutation, ResetPasswordMutationVariables, VerifyAccountDocument, VerifyAccountMutation, VerifyAccountMutationVariables } from '@/gql/graphql'
+import { ChangeProfileAvatarDocument, ChangeProfileAvatarMutation, ChangeProfileAvatarMutationVariables, ChangeProfileInfoDocument, ChangeProfileInfoMutation, ChangeProfileInfoMutationVariables, ClearSessionCookieDocument, ClearSessionCookieMutation, ClearSessionCookieMutationVariables, CreateSocialLinkDocument, CreateSocialLinkMutation, CreateSocialLinkMutationVariables, CreateUserDocument, CreateUserMutation, CreateUserMutationVariables, FindNotificationsByUserDocument, FindNotificationsByUserQuery, FindNotificationsByUserQueryVariables, FindNotificationsUnreadCountDocument, FindNotificationsUnreadCountQuery, FindNotificationsUnreadCountQueryVariables, FindProfileDocument, FindProfileQuery, FindProfileQueryVariables, FindRecommendedChannelsDocument, FindRecommendedChannelsQuery, FindRecommendedChannelsQueryVariables, FindSocialLinksDocument, FindSocialLinksQuery, FindSocialLinksQueryVariables, LoginUserDocument, LoginUserMutation, LoginUserMutationVariables, LogoutUserDocument, LogoutUserMutation, LogoutUserMutationVariables, NewPasswordDocument, NewPasswordMutation, NewPasswordMutationVariables, RemoveProfileAvatarDocument, RemoveProfileAvatarMutation, RemoveProfileAvatarMutationVariables, ResetPasswordDocument, ResetPasswordMutation, ResetPasswordMutationVariables, VerifyAccountDocument, VerifyAccountMutation, VerifyAccountMutationVariables } from '@/gql/graphql'
 
 // ============ AUTH ============
 
@@ -84,21 +84,30 @@ export function useChangeProfileInfoMutation(baseOptions?: any) {
 }
 
 /**
- * Hook for `RemoveProfileAvatar` mutation.
- * @see {@link https://www.apollographql.com/docs/react/data/mutations/}
- * @param baseOptions - MutationOptions for useMutation.
- */
-export function useRemoveProfileAvatarMutation(baseOptions?: any) {
-  return useMutation<RemoveProfileAvatarMutation, RemoveProfileAvatarMutationVariables>(RemoveProfileAvatarDocument, baseOptions)
-}
-
-/**
  * Hook for `ClearSessionCookie` mutation.
  * @see {@link https://www.apollographql.com/docs/react/data/mutations/}
  * @param baseOptions - MutationOptions for useMutation.
  */
 export function useClearSessionCookieMutation(baseOptions?: any) {
   return useMutation<ClearSessionCookieMutation, ClearSessionCookieMutationVariables>(ClearSessionCookieDocument, baseOptions)
+}
+
+/**
+ * Hook for `CreateSocialLink` mutation.
+ * @see {@link https://www.apollographql.com/docs/react/data/mutations/}
+ * @param baseOptions - MutationOptions for useMutation.
+ */
+export function useCreateSocialLinkMutation(baseOptions?: any) {
+  return useMutation<CreateSocialLinkMutation, CreateSocialLinkMutationVariables>(CreateSocialLinkDocument, baseOptions)
+}
+
+/**
+ * Hook for `RemoveProfileAvatar` mutation.
+ * @see {@link https://www.apollographql.com/docs/react/data/mutations/}
+ * @param baseOptions - MutationOptions for useMutation.
+ */
+export function useRemoveProfileAvatarMutation(baseOptions?: any) {
+  return useMutation<RemoveProfileAvatarMutation, RemoveProfileAvatarMutationVariables>(RemoveProfileAvatarDocument, baseOptions)
 }
 
 /**
@@ -126,6 +135,15 @@ export function useFindNotificationsUnreadCountQuery(baseOptions?: any) {
  */
 export function useFindProfileQuery(baseOptions?: any) {
   return useQuery<FindProfileQuery, FindProfileQueryVariables>(FindProfileDocument, baseOptions)
+}
+
+/**
+ * Hook for `FindSocialLinks` query.
+ * @see {@link https://www.apollographql.com/docs/react/data/queries/}
+ * @param baseOptions - WatchQueryOptions for useQuery.
+ */
+export function useFindSocialLinksQuery(baseOptions?: any) {
+  return useQuery<FindSocialLinksQuery, FindSocialLinksQueryVariables>(FindSocialLinksDocument, baseOptions)
 }
 
 // ============ CHANNEL ============
