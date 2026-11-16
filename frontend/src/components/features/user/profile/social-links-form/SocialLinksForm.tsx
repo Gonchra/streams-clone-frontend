@@ -12,6 +12,7 @@ import { Input } from '@/components/ui/common/input'
 import { Skeleton } from '@/components/ui/common/skeleton'
 import { Separator } from '@/components/ui/common/separator'
 import { Button } from '@/components/ui/common/button'
+import { SocialLinksList } from '@/components/features/user/profile/social-links-form/SocialLinksList'
 
 export function SocialLinksForm() {
 	const t = useTranslations('dashboard.settings.profile.socialLinks.createForm')
@@ -98,6 +99,7 @@ export function SocialLinksForm() {
 					</div>
 				</form>
 			</Form>
+			<SocialLinksList />
 		</FormWrapper>
 	)
 }
