@@ -5,7 +5,7 @@
  */
 
 import { useQuery, useMutation, useSubscription } from '@apollo/client/react'
-import { ChangeProfileAvatarDocument, ChangeProfileAvatarMutation, ChangeProfileAvatarMutationVariables, ChangeProfileInfoDocument, ChangeProfileInfoMutation, ChangeProfileInfoMutationVariables, ClearSessionCookieDocument, ClearSessionCookieMutation, ClearSessionCookieMutationVariables, CreateSocialLinkDocument, CreateSocialLinkMutation, CreateSocialLinkMutationVariables, CreateUserDocument, CreateUserMutation, CreateUserMutationVariables, FindNotificationsByUserDocument, FindNotificationsByUserQuery, FindNotificationsByUserQueryVariables, FindNotificationsUnreadCountDocument, FindNotificationsUnreadCountQuery, FindNotificationsUnreadCountQueryVariables, FindProfileDocument, FindProfileQuery, FindProfileQueryVariables, FindRecommendedChannelsDocument, FindRecommendedChannelsQuery, FindRecommendedChannelsQueryVariables, FindSocialLinksDocument, FindSocialLinksQuery, FindSocialLinksQueryVariables, LoginUserDocument, LoginUserMutation, LoginUserMutationVariables, LogoutUserDocument, LogoutUserMutation, LogoutUserMutationVariables, NewPasswordDocument, NewPasswordMutation, NewPasswordMutationVariables, RemoveProfileAvatarDocument, RemoveProfileAvatarMutation, RemoveProfileAvatarMutationVariables, RemoveSocialLinkDocument, RemoveSocialLinkMutation, RemoveSocialLinkMutationVariables, ReorderSocialLinksDocument, ReorderSocialLinksMutation, ReorderSocialLinksMutationVariables, ResetPasswordDocument, ResetPasswordMutation, ResetPasswordMutationVariables, UpdateSocialLinkDocument, UpdateSocialLinkMutation, UpdateSocialLinkMutationVariables, VerifyAccountDocument, VerifyAccountMutation, VerifyAccountMutationVariables } from '@/gql/graphql'
+import { ChangeEmailDocument, ChangeEmailMutation, ChangeEmailMutationVariables, ChangePasswordDocument, ChangePasswordMutation, ChangePasswordMutationVariables, ChangeProfileAvatarDocument, ChangeProfileAvatarMutation, ChangeProfileAvatarMutationVariables, ChangeProfileInfoDocument, ChangeProfileInfoMutation, ChangeProfileInfoMutationVariables, ClearSessionCookieDocument, ClearSessionCookieMutation, ClearSessionCookieMutationVariables, CreateSocialLinkDocument, CreateSocialLinkMutation, CreateSocialLinkMutationVariables, CreateUserDocument, CreateUserMutation, CreateUserMutationVariables, DisableTotpDocument, DisableTotpMutation, DisableTotpMutationVariables, EnableTotpDocument, EnableTotpMutation, EnableTotpMutationVariables, FindNotificationsByUserDocument, FindNotificationsByUserQuery, FindNotificationsByUserQueryVariables, FindNotificationsUnreadCountDocument, FindNotificationsUnreadCountQuery, FindNotificationsUnreadCountQueryVariables, FindProfileDocument, FindProfileQuery, FindProfileQueryVariables, FindRecommendedChannelsDocument, FindRecommendedChannelsQuery, FindRecommendedChannelsQueryVariables, FindSocialLinksDocument, FindSocialLinksQuery, FindSocialLinksQueryVariables, GenerateTotpSecretDocument, GenerateTotpSecretQuery, GenerateTotpSecretQueryVariables, LoginUserDocument, LoginUserMutation, LoginUserMutationVariables, LogoutUserDocument, LogoutUserMutation, LogoutUserMutationVariables, NewPasswordDocument, NewPasswordMutation, NewPasswordMutationVariables, RemoveProfileAvatarDocument, RemoveProfileAvatarMutation, RemoveProfileAvatarMutationVariables, RemoveSocialLinkDocument, RemoveSocialLinkMutation, RemoveSocialLinkMutationVariables, ReorderSocialLinksDocument, ReorderSocialLinksMutation, ReorderSocialLinksMutationVariables, ResetPasswordDocument, ResetPasswordMutation, ResetPasswordMutationVariables, UpdateSocialLinkDocument, UpdateSocialLinkMutation, UpdateSocialLinkMutationVariables, VerifyAccountDocument, VerifyAccountMutation, VerifyAccountMutationVariables } from '@/gql/graphql'
 
 // ============ AUTH ============
 
@@ -66,6 +66,24 @@ export function useVerifyAccountMutation(baseOptions?: any) {
 // ============ USER ============
 
 /**
+ * Hook for `ChangeEmail` mutation.
+ * @see {@link https://www.apollographql.com/docs/react/data/mutations/}
+ * @param baseOptions - MutationOptions for useMutation.
+ */
+export function useChangeEmailMutation(baseOptions?: any) {
+  return useMutation<ChangeEmailMutation, ChangeEmailMutationVariables>(ChangeEmailDocument, baseOptions)
+}
+
+/**
+ * Hook for `ChangePassword` mutation.
+ * @see {@link https://www.apollographql.com/docs/react/data/mutations/}
+ * @param baseOptions - MutationOptions for useMutation.
+ */
+export function useChangePasswordMutation(baseOptions?: any) {
+  return useMutation<ChangePasswordMutation, ChangePasswordMutationVariables>(ChangePasswordDocument, baseOptions)
+}
+
+/**
  * Hook for `ChangeProfileAvatar` mutation.
  * @see {@link https://www.apollographql.com/docs/react/data/mutations/}
  * @param baseOptions - MutationOptions for useMutation.
@@ -99,6 +117,24 @@ export function useClearSessionCookieMutation(baseOptions?: any) {
  */
 export function useCreateSocialLinkMutation(baseOptions?: any) {
   return useMutation<CreateSocialLinkMutation, CreateSocialLinkMutationVariables>(CreateSocialLinkDocument, baseOptions)
+}
+
+/**
+ * Hook for `DisableTotp` mutation.
+ * @see {@link https://www.apollographql.com/docs/react/data/mutations/}
+ * @param baseOptions - MutationOptions for useMutation.
+ */
+export function useDisableTotpMutation(baseOptions?: any) {
+  return useMutation<DisableTotpMutation, DisableTotpMutationVariables>(DisableTotpDocument, baseOptions)
+}
+
+/**
+ * Hook for `EnableTotp` mutation.
+ * @see {@link https://www.apollographql.com/docs/react/data/mutations/}
+ * @param baseOptions - MutationOptions for useMutation.
+ */
+export function useEnableTotpMutation(baseOptions?: any) {
+  return useMutation<EnableTotpMutation, EnableTotpMutationVariables>(EnableTotpDocument, baseOptions)
 }
 
 /**
@@ -171,6 +207,15 @@ export function useFindProfileQuery(baseOptions?: any) {
  */
 export function useFindSocialLinksQuery(baseOptions?: any) {
   return useQuery<FindSocialLinksQuery, FindSocialLinksQueryVariables>(FindSocialLinksDocument, baseOptions)
+}
+
+/**
+ * Hook for `GenerateTotpSecret` query.
+ * @see {@link https://www.apollographql.com/docs/react/data/queries/}
+ * @param baseOptions - WatchQueryOptions for useQuery.
+ */
+export function useGenerateTotpSecretQuery(baseOptions?: any) {
+  return useQuery<GenerateTotpSecretQuery, GenerateTotpSecretQueryVariables>(GenerateTotpSecretDocument, baseOptions)
 }
 
 // ============ CHANNEL ============

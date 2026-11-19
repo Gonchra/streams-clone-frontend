@@ -6,6 +6,9 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/common
 import { ChangeAvatarForm } from '@/components/features/user/profile/ChangeAvatarForm'
 import { ChangeInfoForm } from '@/components/features/user/profile/ChangeInfoForm'
 import { SocialLinksForm } from '@/components/features/user/profile/social-links-form/SocialLinksForm'
+import { ChangeEmailForm } from '@/components/features/user/account/ChangeEmailForm'
+import { ChangePasswordForm } from '@/components/features/user/account/ChangePasswordForm'
+import { WrapperTOTP } from '@/components/features/user/account/totp/WrapperTOTP'
 
 export function UserSettings() {
 	const t = useTranslations('dashboard.settings')
@@ -43,7 +46,16 @@ export function UserSettings() {
 						<SocialLinksForm />
 					</div>
 				</TabsContent>
-				<TabsContent value="account">2</TabsContent>
+				<TabsContent value="account">
+					<div className="mt-5 space-y-6">
+						<Heading title={t('account.header.heading')} description={t('account.header.description')} />
+						<ChangeEmailForm />
+						<ChangePasswordForm />
+						<Heading title={t('account.header.securityHeading')}
+						         description={t('account.header.securityDescription')} />
+						<WrapperTOTP />
+					</div>
+				</TabsContent>
 				<TabsContent value="appearance">3</TabsContent>
 				<TabsContent value="notifications">4</TabsContent>
 				<TabsContent value="sessions">5</TabsContent>
